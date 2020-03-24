@@ -55,7 +55,7 @@ function cycle(){
 
 function play(i)
 {
-    var video = document.querySelector("#video-player>iframe");
+    var video = document.querySelector("#video-player>.video-container>iframe");
     var title = document.querySelector("#video-player>#video-title");
 
     video.src = createUrl(list[i].id);
@@ -63,7 +63,7 @@ function play(i)
 }
 
 function createUrl(id) {
-   return "https://www.youtube.com/embed/" + id;
+    return "https://www.youtube.com/embed/" + id;
 }
 
 window.onload = main;

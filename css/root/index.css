@@ -17,13 +17,14 @@ body{
     background-repeat: repeat;
 }
 header{
-    position: relative;
+    position: fixed;
     top: 0;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 50px;
     background: #00bfff; /*這顏色叫深天空藍，是我第一喜歡的顏色，其次是白色。*/
+    z-index: 1;
 }
 header>.logo{
     position: relative;
@@ -35,18 +36,6 @@ header>.logo>img{
     position: relative;
     height: 100%;
     width: auto;
-}
-header>.title{
-    position: relative;
-    height: 100%;
-    width: auto;
-    line-height: 50px;
-    font-size: 30px;
-    text-align: center;
-    font-family: Microsoft JhengHei;
-    font-weight: bold;
-    color: white;
-    text-shadow: black 0.1em 0.1em 0.2em;
 }
 #clock{
     position: relative;
@@ -61,91 +50,56 @@ header>.title{
     color: white;
     text-shadow: black 0.1em 0.1em 0.2em;
 }
+header>.sidebar-left>.index{
+    position: relative;
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+    nav ul{
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav a{
+        color: inherit;
+        text-decoration: none;
+        font-family: Microsoft JhengHei;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        font-weight: bold;
+        line-height: 50px;
+        display: block;
+        font-size: 26px;
+    }
+    nav a:hover{
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #00bfff;
+    }
 main{
+    display: grid;
+    grid-template-columns: 80% 20%;
     position: relative;
-    height: auto;
-    width: 1900px;
-    margin: 0px auto;
-    padding: 0;
-}
-main>.sidebar-left{
-    background-color: rgba(255, 255, 255, 0.5);
-    height: auto;
-    width: 10%;
-    float: left;
-}
-main>.sidebar-left>.index{
-    position: relative;
+    top:50px;
     height: auto;
     width: auto;
-    margin: 0% auto;
-    padding: 10px;
-    text-align: left;
-}
-nav>ul{
-    list-style: none;
     margin: 0;
     padding: 0;
-}
-nav a{
-    color: inherit;
-    text-decoration: none;
-    font-family: Microsoft JhengHei;
-    font-weight: bold;
-    display: block;
-    font-size: 26px;
-    padding: 10px;
-}
-nav a:hover{
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #00bfff;
-}
-main>.sidebar-right{
-    background-color: rgba(255, 255, 255, 0.5);
-    height: auto;
-    width: 20%;
-    text-align: center;
-    float: right;
-}
-main>.sidebar-right>.photo{
-    padding: 10px;
-    height: 500px;
-}
-main>.sidebar-right>.photo>img{
-    height:100%;
-    width: auto;
-}
-main>.sidebar-right>table{
-    width: 95%;
-    border: 5px solid #00bfff;
-    border-collapse: collapse;
-    margin: 5px auto;
-    font-family: Microsoft JhengHei;
-    text-align: center;
-}
-main>.sidebar-right>th, td{
-    border: 2px solid #00bfff;
-    border-collapse: collapse;
-    padding: 5px;
-}
-main>.sidebar-right a{
-    color: rgb(0, 68, 255);
-    text-decoration: none;
-    font-weight: bold;
+    place-items: center;
 }
 main>.content{
     background-color: rgba(255, 255, 255, 0.75);
-    margin-left: 10%;
-    margin-right: 20%;
     height: 100%;
-    width: 70%;
+    width: 100%;
 }
 main>.content>.article{
     position: relative;
     height: auto;
     width: auto;
-    margin: 0% auto;
-    padding: 10px;
+    margin: 0;
+    padding: 0 1% 4%;
     text-align: left;
 }
 main>.content>.article>.grid-container0{
@@ -203,6 +157,18 @@ main p{
     text-align: left;
     margin: 0px;
 }
+    #video-player>.video-container {
+        position: relative; 
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+    #video-player>.video-container iframe, .video-container object, .video-container embed {
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+    }
 main>.content>.article>.grid-container1{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -235,6 +201,37 @@ main>.content>.article>.grid-container1{
         height: 100%;
         width: auto;
     }
+main>.sidebar-right{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+main>.sidebar-right>.photo{
+    padding: 10px;
+}
+main>.sidebar-right>.photo>img{
+    max-height: 100%;
+    max-width: 100%;
+}
+main>.sidebar-right>table{
+    width: 95%;
+    border: 5px solid #00bfff;
+    border-collapse: collapse;
+    margin: 5px auto;
+    font-family: Microsoft JhengHei;
+    text-align: center;
+}
+main>.sidebar-right>th, td{
+    border: 2px solid #00bfff;
+    border-collapse: collapse;
+    padding: 5px;
+}
+main>.sidebar-right a{
+    color: rgb(0, 68, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
 footer{
     position: relative;
     bottom: 0;
