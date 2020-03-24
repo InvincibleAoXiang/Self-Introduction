@@ -1,0 +1,262 @@
+/*不開玩笑，打這些有夠累的，以後我再也不想純手工做網頁了。*/
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;           
+    padding: 0;
+}
+body{
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0;           
+    padding: 0;
+    background-attachment: fixed;
+    background-color:transparent;
+    background-image: url("../../img/background.png");
+    background-repeat: repeat;
+}
+header{
+    position: relative;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    background: #00bfff; /*這顏色叫深天空藍，是我第一喜歡的顏色，其次是白色。*/
+}
+header>.logo{
+    position: relative;
+    height: 100%;
+    width: auto;
+    float: left;
+}
+header>.logo>img{
+    position: relative;
+    height: 100%;
+    width: auto;
+}
+header>.title{
+    position: relative;
+    height: 100%;
+    width: auto;
+    line-height: 50px;
+    font-size: 30px;
+    text-align: center;
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+#clock{
+    position: relative;
+    right: 10px;
+    height: 100%;
+    width: auto;
+    float: right;
+    text-align: left;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: Microsoft JhengHei;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+main{
+    position: relative;
+    height: auto;
+    width: 1900px;
+    margin: 0px auto;
+    padding: 0;
+}
+main>.sidebar-left{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: auto;
+    width: 10%;
+    float: left;
+}
+main>.sidebar-left>.index{
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 0% auto;
+    padding: 10px;
+    text-align: left;
+}
+nav>ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav a{
+    color: inherit;
+    text-decoration: none;
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+    display: block;
+    font-size: 26px;
+    padding: 10px;
+}
+nav a:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #00bfff;
+}
+main>.sidebar-right{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: auto;
+    width: 20%;
+    text-align: center;
+    float: right;
+}
+main>.sidebar-right>.photo{
+    padding: 10px;
+    height: 500px;
+}
+main>.sidebar-right>.photo>img{
+    height:100%;
+    width: auto;
+}
+main>.sidebar-right>table{
+    width: 95%;
+    border: 5px solid #00bfff;
+    border-collapse: collapse;
+    margin: 5px auto;
+    font-family: Microsoft JhengHei;
+    text-align: center;
+}
+main>.sidebar-right>th, td{
+    border: 2px solid #00bfff;
+    border-collapse: collapse;
+    padding: 5px;
+}
+main>.sidebar-right a{
+    color: rgb(0, 68, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+main>.content{
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-left: 10%;
+    margin-right: 20%;
+    height: 100%;
+    width: 70%;
+}
+main>.content>.article{
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 0% auto;
+    padding: 10px;
+    text-align: left;
+}
+main>.content>.article>.grid-container0{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-auto-rows: 230px;
+    height: auto;
+    width: auto;
+    padding: 5px;
+    float: right;
+    place-items: center;
+    grid-template-areas:
+        "a a"
+        "b c"
+        "d e";
+}
+    .picture{
+        position: relative;
+        height: 200px;
+        width: auto;
+        margin: 0;
+        padding: 10px;
+        border: 3px solid #00bfff;
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: left;
+    }
+    .picture>img{
+        padding: 2px;
+        height: 90%;
+        width: auto;
+    }
+        .a{
+            grid-area: a;
+        }
+        .b{
+            grid-area: b;
+        }
+        .c{
+            grid-area: c;
+        }
+        .d{
+            grid-area: d;
+        }
+        .e{
+            grid-area: e;
+        }
+main p{
+    font-size: 26px;
+    font-family: DFKai-sb;
+}
+#video-player{
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin: 0px;
+}
+main>.content>.article>.grid-container1{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 300px;
+    width: 100%;
+    height: auto;
+    place-items: center;
+}
+    .link{
+        position: relative;
+        height: 200px;
+        width: 200px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 24px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+    .link>p{
+        height: 80%;
+        width: auto;
+        margin: 0;
+    }
+    .link>p>a{
+        height: 100%;
+        width: auto;
+        display: block;
+    }
+    .link>p>a>img{
+        height: 100%;
+        width: auto;
+    }
+footer{
+    position: relative;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    margin: 0px auto;
+    background-attachment: scroll;
+    background-color:transparent;
+    background-image: url("../../img/footer.jpg"); /*我用Photoshop畫的。*/
+    background-repeat: repeat;
+    z-index: 1;
+}
+footer>div{
+    position: relative;
+    height: auto;
+    width: auto;
+    top: 100px;
+    margin: 0px auto;
+    font-size: 30px;
+    text-align: center;
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
