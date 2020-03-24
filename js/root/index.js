@@ -63,7 +63,7 @@ function play(i)
 }
 
 function createUrl(id) {
-    return "http://www.youtube.com/embed/" + id;
+    return https://www.youtube.com/embed/" + id;
 }
 
 window.onload = main;
