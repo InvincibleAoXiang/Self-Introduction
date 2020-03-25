@@ -6,7 +6,7 @@
 <meta name="author" content="曹鈞翔">
 <meta name="description" content="這是我的自我介紹">
 <meta name="keywords" content="曹, 鈞, 翔, Ao-Xiang, jim09140814, 翔哥, 翱翔">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.25, maximum-scale=4.0, user-scalable=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=8.0, user-scalable=yes">
 <title>曹鈞翔 | 個人簡介</title>
 <link rel="stylesheet" href="css/root/index.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -16,8 +16,8 @@
 <!--寫中文應該可以吧? 不管了，反正我就爛。-->
 <header>
     <div class="logo"><img src="img/AoXiang.ico" title="Logo" alt="Oops, something went wrong!"></div>
-    <div id="clock">
-        本地時間: <span>time here</span>
+    <div class="hide-in-phone">
+        <span id="clock">time here</span>
     </div>
     <div class="index">
         <nav>
@@ -58,29 +58,33 @@
             <hr />
             <p>我的興趣非常狹隘，而且都非常不健康，對，沒錯，我不喜歡運動(但不包含頭腦或手指運動)。</p>
             <p>首先是建築，我喜歡欣賞建築物的外觀，觀察人工結構與環境及光線的交織之美，但我對建築物的結構強度之類的理工知識不感興趣。我曾經一度想成為一名建築師，因為就我所知，台灣的建築師只要負責建物外型即可，結構和工程的部分交給土木技師就行了。但後來我去參加了東海大學建築系學生舉辦的營隊，我意識到了我缺乏想像力與創造力，而且還缺乏美感，所以我就打消當建築師的念頭了。可是宮崎駿不是用動畫告訴我們要不畏艱難嗎?為什麼我這麼快就放棄了呢?因為我還有其他興趣啊。</p>
-            <div class="grid-container">
-                <div class="picture a">
+            <div id="flex-container0">
+                <div id="picture">
                     <img src="img/3dPrint0.jpg" title="3D列印1" alt="Oops, something went wrong!">
+                    <br>
+                    <span>▲3D列印預覽</span>
+                </div>
+                <div id="picture">
                     <img src="img/3dPrint1.jpg" title="3D列印2" alt="Oops, something went wrong!">
                     <br>
-                    <span>▲3D列印</span>
+                    <span>▲3D列印成品</span>
                 </div>
-                <div class="picture b">
+                <div id="picture">
                     <img src="img/led.jpg" title="電子明滅器" alt="Oops, something went wrong!">
                     <br>
                     <span>▲國中時做的明滅器</span>
                 </div>
-                <div class="picture c">
+                <div id="picture">
                     <img src="img/lego.jpg" title="LEGO自走車" alt="Oops, something went wrong!">
                     <br>
                     <span>▲LEGO自走車</span>
                 </div>
-                <div class="picture d">
+                <div id="picture">
                     <img src="img/minecraft.png" title="Google地圖" alt="Oops, something went wrong!">
                     <br>
                     <span>▲我蓋的小屋(光線追蹤模組)</span>
                 </div>
-                <div class="picture e">
+                <div id="picture">
                     <img src="img/map.png" title="Google地圖" alt="Oops, something went wrong!">
                     <br>
                     <span>▲我的Google地圖貢獻</span>
@@ -94,14 +98,14 @@
                 <span style="font-family: Microsoft JhengHei;">▼我的部分影片</span>
                 <button onclick="cycle()">下一部影片</button>
                 <div class="video-container">
-                    <iframe width="1195" height="672" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="192" height="108" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <span id="video-title" style="font-family: Microsoft JhengHei;">video title here</span>
             </div>
             <br>
             <h1 id="section5">社群</h1>
             <hr />
-            <div class="flex-container">
+            <div class="flex-container1">
                 <div class="link">
                     <span>Facebook</span>
                     <p><a href="https://www.facebook.com/jim09140814"><img src="img/facebook.png" title="最好別點，因為我沒什麼在發文" alt="Oops, something went wrong!"></a></p>
@@ -136,7 +140,7 @@
             </div>
         </div>
     </div>
-    <div class="sidebar-right">
+    <div class="sidebar">
         <div class = "photo">
             <img src="img/full-body-shot.jpg" title="我的醜照" alt="Oops, something went wrong!">
         </div>

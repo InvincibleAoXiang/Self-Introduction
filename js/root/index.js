@@ -1,6 +1,8 @@
+/*MainFunction==========================================================================================*/
 function main()
 {
     play(0);
+    setFlexWidth();
 }
 
 /*Clock==================================================================================================*/
@@ -9,9 +11,34 @@ var updater = setInterval(function(){clock()},1000);
 function clock()
 {
     var time = new Date();
-    var timeTag = document.querySelector("#clock>span");
+    var timeTag = document.querySelector("#clock");
 
     timeTag.innerText = time.toLocaleTimeString();
+}
+
+/*PictureCollage=========================================================================================*/
+var setFlexWidth = function(){
+    var windoWidth = document.documentElement.clientWidth;
+
+    if(windoWidth>=700){
+        $("#flex-container0").css("width", "50%");
+    }else if(windoWidth<=400){
+        $("#flex-container0").css("width", "100%");
+    }else{
+        switch(Math.round(windoWidth/100)){
+            case 4:
+                $("#flex-container0").css("width", "88%");
+                break;
+            case 5:
+                $("#flex-container0").css("width", "75%");
+                break;
+            case 6:
+                $("#flex-container0").css("width", "63%");
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 /*VideoPlayer============================================================================================*/
@@ -66,4 +93,9 @@ function createUrl(id) {
     return "https://www.youtube.com/embed/" + id;
 }
 
+/*Updater=========================================================================================================*/
 window.onload = main;
+
+window.onresize = function(){
+    setFlexWidth();  
+}

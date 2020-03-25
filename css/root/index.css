@@ -1,14 +1,15 @@
-/*不開玩笑，打這些有夠累的，以後我再也不想純手工做網頁了。*/
+/*HideInPhone================================================================*/
+.hide-in-phone{display:none}
+@media only screen and (min-width: 600px){
+    .hide-in-phone {display: block;}
+}
+
+/*Style========================================================================*/
 html{
-    height: 100%;
-    width: 100%;
     margin: 0;           
     padding: 0;
 }
 body{
-    overflow: auto;
-    height: 100%;
-    width: 100%;
     margin: 0;           
     padding: 0;
     background-attachment: fixed;
@@ -16,252 +17,232 @@ body{
     background-image: url("../../img/background.png");
     background-repeat: repeat;
 }
-header{
-    position: fixed;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 50px;
-    background: #00bfff; /*這顏色叫深天空藍，是我第一喜歡的顏色，其次是白色。*/
-    z-index: 1;
-}
-header>.logo{
-    position: relative;
-    height: 100%;
-    width: auto;
-    float: left;
-}
-header>.logo>img{
-    position: relative;
-    height: 100%;
-    width: auto;
-}
-#clock{
-    position: relative;
-    right: 10px;
-    height: 100%;
-    width: auto;
-    float: right;
-    text-align: left;
-    line-height: 50px;
-    font-size: 20px;
-    font-family: Microsoft JhengHei;
-    color: white;
-    text-shadow: black 0.1em 0.1em 0.2em;
-}
-header>.sidebar-left>.index{
-    position: relative;
-    height: 100%;
-    width: auto;
-    margin: 0 auto;
-}
-    nav ul{
+    header{
+        position: fixed;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 50px;
+        background: #00bfff; /*這顏色叫深天空藍，是我第一喜歡的顏色，其次是白色。*/
+        z-index: 1;
+    }
+        .logo{
+            position: relative;
+            height: 100%;
+            width: auto;
+            float: left;
+            z-index: 1;
+        }
+            .logo>img{
+                position: relative;
+                height: 100%;
+                width: auto;
+            }
+        #clock{
+            position: relative;
+            right: 10px;
+            height: 100%;
+            width: auto;
+            float: right;
+            text-align: left;
+            line-height: 50px;
+            font-size: 20px;
+            font-family: Microsoft JhengHei;
+            color: white;
+            text-shadow: black 0.1em 0.1em 0.2em;
+            z-index: 1;
+        }
+        .index{
+            position: relative;
+            height: 100%;
+            width: auto;
+            margin: 0 auto;
+        }
+            .index ul{
+                display: flex;
+                justify-content: space-evenly;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            .index a{
+                color: inherit;
+                text-decoration: none;
+                font-family: Microsoft JhengHei;
+                color: white;
+                text-shadow: black 0.1em 0.1em 0.2em;
+                font-weight: bold;
+                line-height: 50px;
+                display: block;
+                font-size: 26px;
+            }
+                .index a:hover{
+                    background-color: rgba(255, 255, 255, 0.5);
+                    color: #00bfff;
+                }
+    main{
         display: flex;
-        justify-content: space-evenly;
-        list-style: none;
+        flex-flow: row-reverse wrap;
+        position: relative;
+        top: 50px;
+        height: auto;
+        width: auto;
         margin: 0;
         padding: 0;
     }
-    nav a{
-        color: inherit;
-        text-decoration: none;
-        font-family: Microsoft JhengHei;
-        color: white;
-        text-shadow: black 0.1em 0.1em 0.2em;
-        font-weight: bold;
-        line-height: 50px;
-        display: block;
-        font-size: 26px;
-    }
-    nav a:hover{
-        background-color: rgba(255, 255, 255, 0.5);
-        color: #00bfff;
-    }
-main{
-    display: flex;
-    flex-flow: row-reverse wrap;
-    grid-template-columns: 80% 20%;
-    position: relative;
-    top: 50px;
-    height: auto;
-    width: auto;
-    margin: 0;
-    padding: 0;
-}
-main>.content{
-    flex: 4 1 80%;
-    order: 2;
-    background-color: rgba(255, 255, 255, 0.75);
-    height: 100%;
-    width: 100%;
-}
-main>.content>.article{
-    position: relative;
-    height: auto;
-    width: auto;
-    margin: 0;
-    padding: 0 1% 5%;
-    text-align: left;
-}
-main>.content>.article>.grid-container{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-auto-rows: 230px;
-    height: auto;
-    width: auto;
-    padding: 5px;
-    float: right;
-    place-items: center;
-    grid-template-areas:
-        "a a"
-        "b c"
-        "d e";
-}
-    .picture{
+        .content{
+            flex: 4 1 80%;
+            order: 2;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.75);
+        }
+            .article{
+                position: relative;
+                height: auto;
+                width: auto;
+                margin: 0;
+                padding: 0 1% 5%;
+                text-align: left;
+            }
+                .article p{
+                    font-size: 26px;
+                    font-family: DFKai-sb;
+                }
+                #flex-container0{
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-around;
+                    align-content: space-around;
+                    min-height: 230px;
+                    width: 100%;                
+                    float: right;
+                }
+                    #picture{
+                        flex: 1 1 auto;
+                        height: 200px;
+                        width: auto;
+                        margin: 5px;
+                        padding: 10px;
+                        border: 3px solid #00bfff;
+                        background-color: rgba(255, 255, 255, 0.5);
+                        text-align: center;
+                    }
+                        #picture img{
+                            height: 90%;
+                            width: auto;
+                        }
+                #video-player{
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    text-align: left;
+                    margin: 0px;
+                }
+                    #video-player>.video-container {
+                        position: relative; 
+                        padding-bottom: 56.25%;
+                        height: 0;
+                        overflow: hidden;
+                    }
+                    #video-player>.video-container iframe, .video-container object, .video-container embed {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                .flex-container1{
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-around;
+                    align-content: space-around;
+                    width: auto;
+                    min-height: 230px;
+                    padding: 5px;
+                }
+                    .link{
+                        height: 200px;
+                        width: 200px;
+                        margin: 10px;
+                        text-align: center;
+                        font-size: 24px;
+                        font-family: "Comic Sans MS", cursive, sans-serif;
+                    }
+                        .link p{
+                            height: 80%;
+                            width: auto;
+                            margin: 0;
+                        }
+                        .link a{
+                            height: 100%;
+                            width: auto;
+                            display: block;
+                        }
+                        .link img{
+                            max-height: 100%;
+                            max-width: 100%;
+                            height: 100%;
+                            width: auto;
+                        }
+        .sidebar{
+            flex: 1 1 20%;
+            order: 1;
+            background-color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+        }
+            .photo{
+                padding: 10px;
+            }
+                .photo>img{
+                    max-height: 100%;
+                    max-width: 100%;
+                    height: 100%;
+                    width: 100%;
+                }
+            .sidebar table{
+                width: 95%;
+                border: 5px solid #00bfff;
+                border-collapse: collapse;
+                margin: 5px auto;
+                font-family: Microsoft JhengHei;
+                text-align: center;
+            }
+            .sidebar th, td{
+                border: 2px solid #00bfff;
+                border-collapse: collapse;
+                padding: 5px;
+            }
+            .sidebar a{
+                color: rgb(0, 68, 255);
+                text-decoration: none;
+                font-weight: bold;
+            }
+    footer{
         position: relative;
-        height: 200px;
-        width: auto;
-        margin: 0;
-        padding: 10px;
-        border: 3px solid #00bfff;
-        background-color: rgba(255, 255, 255, 0.5);
-        text-align: left;
-    }
-    .picture>img{
-        padding: 2px;
-        height: 90%;
-        width: auto;
-    }
-        .a{
-            grid-area: a;
-        }
-        .b{
-            grid-area: b;
-        }
-        .c{
-            grid-area: c;
-        }
-        .d{
-            grid-area: d;
-        }
-        .e{
-            grid-area: e;
-        }
-main p{
-    font-size: 26px;
-    font-family: DFKai-sb;
-}
-#video-player{
-    position: relative;
-    width: 100%;
-    height: auto;
-    text-align: left;
-    margin: 0px;
-}
-    #video-player>.video-container {
-        position: relative; 
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-    }
-    #video-player>.video-container iframe, .video-container object, .video-container embed {
-        position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-main>.content>.article>.flex-container{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: space-around;
-    width: auto;
-    min-height: 230px;
-    padding: 5px;
-}
-    .link{
         height: 200px;
-        width: 200px;
-        margin: 10px;
-        text-align: center;
-        font-size: 24px;
-        font-family: "Comic Sans MS", cursive, sans-serif;
+        width: 100%;
+        margin: 0px auto;
+        background-attachment: scroll;
+        background-color:transparent;
+        background-image: url("../../img/footer.jpg"); /*我用Photoshop畫的。*/
+        background-repeat: repeat;
+        z-index: 1;
     }
-    .link>p{
-        height: 80%;
-        width: auto;
-        margin: 0;
-    }
-    .link>p>a{
-        height: 100%;
-        width: auto;
-        display: block;
-    }
-    .link>p>a>img{
-        max-height: 100%;
-        max-width: 100%;
-        height: 100%;
-        width: auto;
-    }
-main>.sidebar-right{
-    flex: 1 1 20%;
-    order: 1;
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
-main>.sidebar-right>.photo{
-    padding: 10px;
-}
-main>.sidebar-right>.photo>img{
-    max-height: 100%;
-    max-width: 100%;
-    height: 100%;
-    width: 100%;
-}
-main>.sidebar-right>table{
-    width: 95%;
-    border: 5px solid #00bfff;
-    border-collapse: collapse;
-    margin: 5px auto;
-    font-family: Microsoft JhengHei;
-    text-align: center;
-}
-main>.sidebar-right>th, td{
-    border: 2px solid #00bfff;
-    border-collapse: collapse;
-    padding: 5px;
-}
-main>.sidebar-right a{
-    color: rgb(0, 68, 255);
-    text-decoration: none;
-    font-weight: bold;
-}
-footer{
-    position: relative;
-    top: 0;
-    height: 200px;
-    width: 100%;
-    margin: 0px auto;
-    background-attachment: scroll;
-    background-color:transparent;
-    background-image: url("../../img/footer.jpg"); /*我用Photoshop畫的。*/
-    background-repeat: repeat;
-    z-index: 1;
-}
-footer>div{
-    position: relative;
-    height: auto;
-    width: auto;
-    top: 100px;
-    margin: 0px auto;
-    font-size: 30px;
-    text-align: center;
-    font-family: Microsoft JhengHei;
-    font-weight: bold;
-    color: white;
-    text-shadow: black 0.1em 0.1em 0.2em;
-}
+        footer div{
+            position: relative;
+            height: auto;
+            width: auto;
+            top: 100px;
+            margin: 0px auto;
+            font-size: 24px;
+            text-align: center;
+            font-family: Microsoft JhengHei;
+            font-weight: bold;
+            color: white;
+            text-shadow: black 0.1em 0.1em 0.2em;
+        }
+
+/*不開玩笑，打這些有夠累的，以後我再也不想純手工做網頁了。*/
